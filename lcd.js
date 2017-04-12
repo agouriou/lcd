@@ -23,7 +23,11 @@ function printNumberToLcd(numberAsString) {
 function getLcdLinesFromNumber(numberAsString) {
   const allLcdRepresentations = [];
   for (c of numberAsString) {
-    allLcdRepresentations.push(numberRepresentation[parseInt(c)]);
+    const rep = numberRepresentation[parseInt(c)];
+    if(!rep){
+      throw new Error(`Oops, representation for ${c} doesn't exist`)
+    }
+    allLcdRepresentations.push(rep);
   }
   return getLcdLinesFromNumberRepresentations(allLcdRepresentations);
 }
