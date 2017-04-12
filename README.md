@@ -1,7 +1,7 @@
 Prints a number to lcd.
 
 # Usage
- npm start <number>
+ `npm start <number>`
 
  - 0 to 4 are supported
  - 123 will be printed as '123'
@@ -9,4 +9,8 @@ Prints a number to lcd.
 
 
  # Tests
-  npm test
+ You need to:
+ `npm install`
+ 
+ And then:
+  `npm test`
