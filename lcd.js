@@ -33,12 +33,12 @@ function getLcdLinesFromNumber(numberAsString) {
 }
 
 /**
- * Convert number array to printable string
+ * Return lcd lines containing those numbers' representations
  * @param {numberRepresentation[]} numbers 
  */
 function getLcdLinesFromNumberRepresentations(numbers) {
   const lcdLines = ['', '', ''];
-  numbers.forEach((n, index) => {
+  numbers.forEach(n => {
     for (let i in [0, 1, 2]) {
       lcdLines[i] += n[i];
     }
